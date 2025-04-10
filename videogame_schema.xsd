@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <!-- Definición del elemento raíz -->
+    <xs:element name="videogame_documentation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="game" type="gameType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Definición del tipo de juego -->
+    <xs:complexType name="gameType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="platform" type="xs:string"/>
+            <xs:element name="release_date" type="xs:string"/>
+            <xs:element name="developer" type="xs:string"/>
+            <xs:element name="publisher" type="xs:string"/>
+            <xs:element name="genre" type="xs:string"/>
+            <xs:element name="rating" type="xs:string"/>
+            
+            <xs:element name="description" type="descriptionType"/>
+            <xs:element name="features" type="featuresType"/>
+            <xs:element name="gameplay" type="gameplayType"/>
+            <xs:element name="technical_specs" type="technicalSpecsType"/>
+            <xs:element name="media" type="mediaType"/>
+            <xs:element name="updates" type="updatesType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+    
+    <!-- Tipo para la descripción -->
+    <xs:complexType name="descriptionType">
+        <xs:sequence>
+            <xs:element name="summary" type="xs:string"/>
+            <xs:element name="detailed" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Tipo para características -->
+    <xs:complexType name="featuresType">
+        <xs:sequence>
+            <xs:element name="feature" type="featureType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="featureType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!-- Tipo para gameplay -->
+    <xs:complexType name="gameplayType">
+        <xs:sequence>
+            <xs:element name="mechanics" type="mechanicsType"/>
+            <xs:element name="progression" type="progressionType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Tipo para mecánicas de juego -->
+    <xs:complexType name="mechanicsType">
+        <xs:sequence>
+            <xs:element name="mechanic" type="mechanicType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="mechanicType">
+        <xs:sequence>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="controls" type="controlsType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <xs:complexType name="controlsType">
+        <xs:sequence>
+            <xs:element name="control" type="controlType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="controlType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="button" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Tipo para progresión -->
+    <xs:complexType name="progressionType">
+        <xs:sequence>
+            <xs:element name="main_quest" type="xs:string"/>
+            <xs:element name="side_content" type="sideContentType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="sideContentType">
+        <xs:sequence>
+            <xs:element name="shrines" type="countedContentType" minOccurs="0"/>
+            <xs:element name="korok_seeds" type="countedContentType" minOccurs="0"/>
+            <xs:element name="side_quests" type="countedContentType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="countedContentType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="count" type="xs:positiveInteger" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Tipo para especificaciones técnicas -->
+    <xs:complexType name="technicalSpecsType">
+        <xs:sequence>
+            <xs:element name="resolution" type="xs:string"/>
+            <xs:element name="framerate" type="xs:string"/>
+            <xs:element name="file_size" type="xs:string"/>
+            <xs:element name="system_requirements" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Tipo para medios -->
+    <xs:complexType name="mediaType">
+        <xs:sequence>
+            <xs:element name="screenshots" type="screenshotsType" minOccurs="0"/>
+            <xs:element name="videos" type="videosType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="screenshotsType">
+        <xs:sequence>
+            <xs:element name="screenshot" type="mediaItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="videosType">
+        <xs:sequence>
+            <xs:element name="video" type="mediaItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="mediaItemType">
+        <xs:attribute name="url" type="xs:string" use="required"/>
+        <xs:attribute name="description" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!-- Tipo para actualizaciones -->
+    <xs:complexType name="updatesType">
+        <xs:sequence>
+            <xs:element name="update" type="updateType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="updateType">
+        <xs:sequence>
+            <xs:element name="change" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="version" type="xs:string" use="required"/>
+        <xs:attribute name="date" type="xs:date" use="required"/>
+    </xs:complexType>
+    
+</xs:schema>

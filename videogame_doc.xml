@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="videogame_style.xsl"?>
+<videogame_documentation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            xsi:noNamespaceSchemaLocation="videogame_schema.xsd">
+    <game id="game001">
+        <title>The Legend of Zelda: Breath of the Wild</title>
+        <platform>Nintendo Switch</platform>
+        <release_date>March 3, 2017</release_date>
+        <developer>Nintendo</developer>
+        <publisher>Nintendo</publisher>
+        <genre>Action-Adventure</genre>
+        <rating>E10+</rating>
+        
+        <description>
+            <summary>An open-world adventure game featuring exploration, puzzle-solving, and combat.</summary>
+            <detailed>
+                Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild, 
+                a boundary-breaking game in the acclaimed series. Travel across fields, through forests and to mountain peaks
+                as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure.
+            </detailed>
+        </description>
+        
+        <features>
+            <feature name="Open World">
+                <description>Explore a vast and interconnected world with minimal restrictions.</description>
+            </feature>
+            <feature name="Physics Engine">
+                <description>Realistic physics allowing for creative problem solving.</description>
+            </feature>
+            <feature name="Climbing System">
+                <description>Climb nearly any surface in the game world.</description>
+            </feature>
+        </features>
+        
+        <gameplay>
+            <mechanics>
+                <mechanic name="Combat">
+                    <description>Real-time combat with various weapons and abilities.</description>
+                    <controls>
+                        <control button="Y">Attack with equipped weapon</control>
+                        <control button="ZL">Target lock-on</control>
+                        <control button="ZR">Ready bow/throw weapon</control>
+                    </controls>
+                </mechanic>
+                <mechanic name="Exploration">
+                    <description>Open-world exploration with climbing, gliding, and swimming mechanics.</description>
+                    <controls>
+                        <control button="X">Jump/Climb</control>
+                        <control button="X (while airborne)">Deploy paraglider</control>
+                    </controls>
+                </mechanic>
+            </mechanics>
+            
+            <progression>
+                <main_quest>Defeat Calamity Ganon and save Hyrule.</main_quest>
+                <side_content>
+                    <shrines count="120">Mini-dungeons with puzzles and rewards.</shrines>
+                    <korok_seeds count="900">Hidden collectibles that can be exchanged for inventory slots.</korok_seeds>
+                    <side_quests count="76">Optional missions from NPCs.</side_quests>
+                </side_content>
+            </progression>
+        </gameplay>
+        
+        <technical_specs>
+            <resolution>900p docked, 720p handheld</resolution>
+            <framerate>30 fps</framerate>
+            <file_size>13.4 GB</file_size>
+            <system_requirements>Nintendo Switch console</system_requirements>
+        </technical_specs>
+        
+        <media>
+            <screenshots>
+                <screenshot url="screenshots/botw_1.jpg" description="Link overlooking Hyrule Field"/>
+                <screenshot url="screenshots/botw_2.jpg" description="Combat with a Guardian"/>
+            </screenshots>
+            <videos>
+                <video url="videos/trailer.mp4" description="Official game trailer"/>
+                <video url="videos/gameplay.mp4" description="Extended gameplay footage"/>
+            </videos>
+        </media>
+        
+        <updates>
+            <update version="1.3.0" date="2017-06-30">
+                <change>Added DLC support for 'The Master Trials'</change>
+                <change>Various bug fixes and stability improvements</change>
+            </update>
+            <update version="1.6.0" date="2017-12-07">
+                <change>Added DLC support for 'The Champions' Ballad'</change>
+                <change>Performance optimizations</change>
+            </update>
+        </updates>
+    </game>
+    
+    <!-- Ejemplo de un segundo juego -->
+    <game id="game002">
+        <title>Cyberpunk 2077</title>
+        <platform>PC, PlayStation, Xbox</platform>
+        <release_date>December 10, 2020</release_date>
+        <developer>CD Projekt Red</developer>
+        <publisher>CD Projekt</publisher>
+        <genre>Action RPG</genre>
+        <rating>M</rating>
+        
+        <description>
+            <summary>An open-world RPG set in a dystopian future city.</summary>
+            <detailed>
+                Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis 
+                obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going 
+                after a one-of-a-kind implant that is the key to immortality.
+            </detailed>
+        </description>
+        
+        <!-- Resto de elementos similar al primer juego pero con información de Cyberpunk 2077 -->
+    </game>
+</videogame_documentation>
