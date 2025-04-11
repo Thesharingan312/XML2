@@ -1,0 +1,132 @@
+{
+    "videogame_documentation": {
+        "games": [
+        {
+            "id": "game001",
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "platform": "Nintendo Switch",
+            "release_date": "March 3, 2017",
+            "developer": "Nintendo",
+            "publisher": "Nintendo",
+            "genre": "Action-Adventure",
+            "rating": "E10+",
+            "description": {
+            "summary": "An open-world adventure game featuring exploration, puzzle-solving, and combat.",
+            "detailed": "Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking game in the acclaimed series. Travel across fields, through forests and to mountain peaks as you discover what has become of the ruined kingdom of Hyrule in this stunning open-air adventure."
+            },
+            "features": [
+            {
+                "name": "Open World",
+                "description": "Explore a vast and interconnected world with minimal restrictions."
+            },
+            {
+                "name": "Physics Engine",
+                "description": "Realistic physics allowing for creative problem solving."
+            },
+            {
+                "name": "Climbing System",
+                "description": "Climb nearly any surface in the game world."
+            }
+            ],
+            "gameplay": {
+            "mechanics": [
+                {
+                "name": "Combat",
+                "description": "Real-time combat with various weapons and abilities.",
+                "controls": [
+                    {"button": "Y", "action": "Attack with equipped weapon"},
+                    {"button": "ZL", "action": "Target lock-on"},
+                    {"button": "ZR", "action": "Ready bow/throw weapon"}
+                ]
+                },
+                {
+                "name": "Exploration",
+                "description": "Open-world exploration with climbing, gliding, and swimming mechanics.",
+                "controls": [
+                    {"button": "X", "action": "Jump/Climb"},
+                    {"button": "X (while airborne)", "action": "Deploy paraglider"}
+                ]
+                }
+            ],
+            "progression": {
+                "main_quest": "Defeat Calamity Ganon and save Hyrule.",
+                "side_content": {
+                "shrines": {
+                    "count": 120,
+                    "description": "Mini-dungeons with puzzles and rewards."
+                },
+                "korok_seeds": {
+                    "count": 900,
+                    "description": "Hidden collectibles that can be exchanged for inventory slots."
+                },
+                "side_quests": {
+                    "count": 76,
+                    "description": "Optional missions from NPCs."
+                }
+                }
+            }
+            },
+            "technical_specs": {
+            "resolution": "900p docked, 720p handheld",
+            "framerate": "30 fps",
+            "file_size": "13.4 GB",
+            "system_requirements": "Nintendo Switch console"
+            },
+            "media": {
+            "screenshots": [
+                {
+                "url": "screenshots/botw_1.jpg",
+                "description": "Link overlooking Hyrule Field"
+                },
+                {
+                "url": "screenshots/botw_2.jpg",
+                "description": "Combat with a Guardian"
+                }
+            ],
+            "videos": [
+                {
+                "url": "videos/trailer.mp4",
+                "description": "Official game trailer"
+                },
+                {
+                "url": "videos/gameplay.mp4",
+                "description": "Extended gameplay footage"
+                }
+            ]
+            },
+            "updates": [
+            {
+                "version": "1.3.0",
+                "date": "2017-06-30",
+                "changes": [
+                "Added DLC support for 'The Master Trials'",
+                "Various bug fixes and stability improvements"
+                ]
+            },
+            {
+                "version": "1.6.0",
+                "date": "2017-12-07",
+                "changes": [
+                "Added DLC support for 'The Champions' Ballad'",
+                "Performance optimizations"
+                ]
+            }
+            ]
+        },
+        {
+            "id": "game002",
+            "title": "Cyberpunk 2077",
+            "platform": "PC, PlayStation, Xbox",
+            "release_date": "December 10, 2020",
+            "developer": "CD Projekt Red",
+            "publisher": "CD Projekt",
+            "genre": "Action RPG",
+            "rating": "M",
+            "description": {
+            "summary": "An open-world RPG set in a dystopian future city.",
+            "detailed": "Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality."
+            }
+        }
+        ]
+    }
+}
