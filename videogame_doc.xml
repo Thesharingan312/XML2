@@ -110,6 +110,55 @@
             </detailed>
         </description>
         
-        <!-- Resto de elementos similar al primer juego pero con información de Cyberpunk 2077 -->
+        <features>
+            <feature name="Open World">
+                <description>Explore a vast and dynamic city with diverse districts.</description>
+            </feature>
+            <feature name="Character Customization">
+                <description>Extensive options for customizing your character's appearance and abilities.</description>
+            </feature>
+        </features>
+        
+        <gameplay>
+            <mechanics>
+                <mechanic name="Combat">
+                    <description>Engage in first-person combat with a variety of weapons and cyberware.</description>
+                    <controls>
+                        <control button="Left Mouse Button">Fire weapon</control>
+                        <control button="Right Mouse Button">Aim down sights</control>
+                    </controls>
+                </mechanic>
+            </mechanics>
+            
+            <progression>
+                <main_quest>Uncover the secrets of the immortality implant.</main_quest>
+                <side_content>
+                    <side_quests count="100">Optional missions with unique stories and rewards.</side_quests>
+                </side_content>
+            </progression>
+        </gameplay>
+        
+        <technical_specs>
+            <resolution>4K supported</resolution>
+            <framerate>60 fps (on high-end PCs)</framerate>
+            <file_size>70 GB</file_size>
+            <system_requirements>Windows 10, 16 GB RAM, NVIDIA GTX 1060</system_requirements>
+        </technical_specs>
+        
+        <media>
+            <screenshots>
+                <screenshot url="screenshots/cyberpunk_1.jpg" description="Night City skyline"/>
+                <screenshot url="screenshots/cyberpunk_2.jpg" description="Combat sequence"/>
+            </screenshots>
+            <videos>
+                <video url="videos/cyberpunk_trailer.mp4" description="Official game trailer"/>
+            </videos>
+        </media>
+        
+        <updates>
+            <update version="1.1" date="2021-01-22">
+                <change>Various bug fixes and stability improvements</change>
+            </update>
+        </updates>
     </game>
 </videogame_documentation>
